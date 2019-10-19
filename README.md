@@ -1,4 +1,4 @@
-# MarcoVolkert.github.io
+# mvolkert.github.io
 
 Angular webapp build distribution for gitHub pages
 
