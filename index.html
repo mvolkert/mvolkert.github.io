@@ -82,6 +82,37 @@
       max-width: 66ch;
     }
 
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(34, 35, 37, 0.15);
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+    }
+
+    .lang-btn:hover,
+    .lang-btn:focus-visible {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .lang-btn.is-active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -284,28 +315,32 @@
 <body>
   <main class="container">
     <section class="hero">
+      <div class="lang-switch" aria-label="Language switch">
+        <button type="button" class="lang-btn is-active" data-lang="de" aria-pressed="true">DE</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <h1>Marco Volkert</h1>
-      <p class="intro">Willkommen auf meiner Website. Hier findest du meine App-Projekte und meine Profile auf den wichtigsten Plattformen.</p>
+      <p class="intro" data-i18n-de="Willkommen auf meiner Website. Hier findest du meine App-Projekte und meine Profile auf den wichtigsten Plattformen." data-i18n-en="Welcome to my website. Here you can find my app projects and my profiles on the most important platforms.">Willkommen auf meiner Website. Hier findest du meine App-Projekte und meine Profile auf den wichtigsten Plattformen.</p>
 
       <section class="about-card" aria-labelledby="about-title">
-        <h2 class="about-title" id="about-title">Über mich</h2>
-        <p class="about-text">Ich arbeite als Senior Fullstack-Entwickler mit 8 Jahren Erfahrung in der Entwicklung stabiler, sicherer, nutzerorientierter Lösungen in einem komplexen Anwendungsumfeld.</p>
+        <h2 class="about-title" id="about-title" data-i18n-de="Über mich" data-i18n-en="About me">Über mich</h2>
+        <p class="about-text" data-i18n-de="Ich arbeite als Senior Fullstack-Entwickler mit 8 Jahren Erfahrung in der Entwicklung stabiler, sicherer, nutzerorientierter Lösungen in einem komplexen Anwendungsumfeld." data-i18n-en="I work as a senior full-stack developer with 8 years of experience building stable, secure, user-centered solutions in a complex environment.">Ich arbeite als Senior Fullstack-Entwickler mit 8 Jahren Erfahrung in der Entwicklung stabiler, sicherer, nutzerorientierter Lösungen in einem komplexen Anwendungsumfeld.</p>
         <ul class="about-list">
-          <li>Unterstützung des Requirements Engineerings aus technischer Sicht</li>
-          <li>Implementierung von User Stories sowie Bugfixes im Frontend (Angular) und Backend (Jakarta EE: Quarkus)</li>
-          <li>Schreiben von Unit-Tests und End-to-End-Tests (junit, vitest, playwright)</li>
-          <li>DevOps-Aufgaben, insbesondere die Konfiguration von Kubernetes-Deployments</li>
-          <li>Analyse von Fehlersituationen, reaktiv bei gemeldeten Problemen und aktiv durch Untersuchung von Logs sowie Metadaten auf Fehler oder verdächtige Datenkonstellationen (Grafana, Prometheus, Loki, Kibana)</li>
-          <li>Erstellung von Bug-Tickets</li>
-          <li>Inzident-Bearbeitung inklusive Analyse und Anwenderkommunikation</li>
-          <li>Kontinuierliche Verbesserung der Barrierefreiheit</li>
+          <li data-i18n-de="Unterstützung des Requirements Engineerings aus technischer Sicht" data-i18n-en="Supporting requirements engineering from a technical perspective">Unterstützung des Requirements Engineerings aus technischer Sicht</li>
+          <li data-i18n-de="Implementierung von User Stories sowie Bugfixes im Frontend (Angular) und Backend (Jakarta EE: Quarkus)" data-i18n-en="Implementing user stories and bug fixes in frontend (Angular) and backend (Jakarta EE: Quarkus)">Implementierung von User Stories sowie Bugfixes im Frontend (Angular) und Backend (Jakarta EE: Quarkus)</li>
+          <li data-i18n-de="Schreiben von Unit-Tests und End-to-End-Tests (junit, vitest, playwright)" data-i18n-en="Writing unit tests and end-to-end tests (junit, vitest, playwright)">Schreiben von Unit-Tests und End-to-End-Tests (junit, vitest, playwright)</li>
+          <li data-i18n-de="DevOps-Aufgaben, insbesondere die Konfiguration von Kubernetes-Deployments" data-i18n-en="DevOps tasks, especially configuring Kubernetes deployments">DevOps-Aufgaben, insbesondere die Konfiguration von Kubernetes-Deployments</li>
+          <li data-i18n-de="Analyse von Fehlersituationen, reaktiv bei gemeldeten Problemen und aktiv durch Untersuchung von Logs sowie Metadaten auf Fehler oder verdächtige Datenkonstellationen (Grafana, Prometheus, Loki, Kibana)" data-i18n-en="Analyzing failure situations, both reactively for reported issues and proactively by investigating logs and metadata for errors or suspicious data patterns (Grafana, Prometheus, Loki, Kibana)">Analyse von Fehlersituationen, reaktiv bei gemeldeten Problemen und aktiv durch Untersuchung von Logs sowie Metadaten auf Fehler oder verdächtige Datenkonstellationen (Grafana, Prometheus, Loki, Kibana)</li>
+          <li data-i18n-de="Erstellung von Bug-Tickets" data-i18n-en="Creating bug tickets">Erstellung von Bug-Tickets</li>
+          <li data-i18n-de="Inzident-Bearbeitung inklusive Analyse und Anwenderkommunikation" data-i18n-en="Handling incidents including analysis and user communication">Inzident-Bearbeitung inklusive Analyse und Anwenderkommunikation</li>
+          <li data-i18n-de="Kontinuierliche Verbesserung der Barrierefreiheit" data-i18n-en="Continuous improvement of accessibility">Kontinuierliche Verbesserung der Barrierefreiheit</li>
         </ul>
-        <p class="about-text">In meiner Freizeit tanze ich und habe privat eine App zum verwalten von Tanzfiguren entwickelt.</p>
+        <p class="about-text" data-i18n-de="In meiner Freizeit tanze ich und habe privat eine App zum verwalten von Tanzfiguren entwickelt." data-i18n-en="In my free time I dance and have privately developed an app for managing dance figures.">In meiner Freizeit tanze ich und habe privat eine App zum verwalten von Tanzfiguren entwickelt.</p>
       </section>
 
       <div class="grid">
         <section class="card" aria-labelledby="apps-title">
-          <h2 class="section-title" id="apps-title">Meine Apps</h2>
+          <h2 class="section-title" id="apps-title" data-i18n-de="Meine Apps" data-i18n-en="My apps">Meine Apps</h2>
           <ul class="links">
             <li>
               <a class="link" href="https://dancing-moves.web.app" target="_blank" rel="noopener noreferrer">
@@ -325,15 +360,15 @@
                     <path fill="#3C7CE6" d="M358.5 178.1L104.4 33.2c-14.9-8.5-28.3-7.5-36.6 1.5l217 205.7 73.7-72.3"/>
                   </svg>
                 </span>
-                Dancing Moves im Google Play Store
+                <span data-i18n-de="Dancing Moves im Google Play Store" data-i18n-en="Dancing Moves on Google Play Store">Dancing Moves im Google Play Store</span>
               </a>
             </li>
           </ul>
-          <p class="apps-note">Die Links öffnen in einem neuen Tab.</p>
+          <p class="apps-note" data-i18n-de="Die Links öffnen in einem neuen Tab." data-i18n-en="Links open in a new tab.">Die Links öffnen in einem neuen Tab.</p>
         </section>
 
         <section class="card" aria-labelledby="social-title">
-          <h2 class="section-title" id="social-title">Social Media</h2>
+          <h2 class="section-title" id="social-title" data-i18n-de="Social Media" data-i18n-en="Social media">Social Media</h2>
           <div class="social">
             <a class="social-link github" href="https://github.com/mvolkert" target="_blank" rel="me noopener noreferrer" aria-label="GitHub Profil">
               <span class="icon" aria-hidden="true">
@@ -376,6 +411,36 @@
     </section>
     <footer>© Marco Volkert 2026</footer>
   </main>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('[data-lang]');
+      var i18nNodes = document.querySelectorAll('[data-i18n-de]');
+
+      function setLanguage(lang) {
+        var normalizedLang = lang === 'en' ? 'en' : 'de';
+        document.documentElement.lang = normalizedLang;
+        document.documentElement.setAttribute('data-lang', normalizedLang);
+
+        i18nNodes.forEach(function (node) {
+          node.textContent = normalizedLang === 'en' ? node.getAttribute('data-i18n-en') : node.getAttribute('data-i18n-de');
+        });
+
+        buttons.forEach(function (button) {
+          var active = button.getAttribute('data-lang') === normalizedLang;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          setLanguage(button.getAttribute('data-lang'));
+        });
+      });
+
+      setLanguage('de');
+    })();
+  </script>
 </body>
 
 </html>
