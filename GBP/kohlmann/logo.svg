@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" role="img" aria-labelledby="title description">
+  <title id="title">Kohlmann UG Heizung Klima Sanitär</title>
+  <desc id="description">Firmenlogo von Kohlmann UG mit roten, grünen und blauen Dachbogen.</desc>
+  <path fill="#e74b56" d="M0 57.5C13.9 43.7 29.4 35.8 47.5 31.6l5.3 5.8C36.4 42 22.4 49.7 11.4 61.7Z"/>
+  <path fill="#4dbd37" d="M48.5 31.4c29.6-17.3 73.2-18 103.8-.3l-7.1 5.2c-27.7-14.6-63.3-14.2-90.2.3Z"/>
+  <path fill="#29518e" d="M147.3 31.3c20.7 4.7 38.9 13.7 52.7 25.9l-11.4 4.6c-10.6-10-23.7-17.6-39.8-22.8Z"/>
+  <text x="101" y="52" fill="#08347a" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="14.7" font-weight="700" text-anchor="middle">KOHLMANN UG</text>
+  <g font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="12.4" font-weight="700" text-anchor="middle">
+    <text x="46" y="65" fill="#e74b56">HEIZUNG</text>
+    <text x="101" y="65" fill="#4dbd37">KLIMA</text>
+    <text x="162" y="65" fill="#29518e">SANITÄR</text>
+  </g>
+  <text x="4" y="77.3" fill="#08347a" font-family="Arial Narrow, Arial, Helvetica, sans-serif" font-size="7.3" font-weight="700" letter-spacing=".9">Beratung, Planung für die gesamte Haustechnik</text>
+</svg>
